@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Commissioner', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #F9F9F9;
+}
+.hero-container{
+    background: url('images/image-hero-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 375px;
+    width: 100%;
+}
+.navbar-menu{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 155px;
+    background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+.hero-container .nama{
+    color: #fff;
+}
+.hero-container .menu ul {
+    display: flex;
+}
+.hero-container .menu ul li{
+    margin-left: 20px;
+    list-style: none;
+    
+}
+.hero-container .menu ul li a{
+    list-style: none;
+    color: #E6E6E6;
+    text-decoration: none;
+    font-size: 13px;
+}
+.body-wrap{
+    margin: -80px auto;
+    /* background-color: red; */
+    width: 700px;
+    height: 500px;
+    position: relative;
+    
+}
+.body-wrap .content{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 10px;
+}
+.body-wrap .content .logo{
+    position: relative;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.body-wrap .content .judul{
+    text-align: center;
+    font-size: 1.65em;
+}
+.body-wrap .content p{
+    text-align: center;
+    color: rgba(0,0,0,0.5);
+    margin-top: 15px;
+    /* margin-bottom: 30px; */
+}
+.body-wrap .content .btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.body-wrap .content .btn button{
+    padding: 16px 40px;
+    border-radius: 32px;
+    color: #fff;
+    background-color: darkcyan;
+    outline: none;
+    border: none;
+    font-weight: 500;
+}
+.body-wrap .content .btn .bookmark{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.body-wrap .content .btn .bookmark h3{
+    padding: 16px;
+    color: darkgray;
+    font-size: 0.9em;
+}
+.body-wrap .content .btn .bookmark .text.active{
+    color: darkcyan;
+}
+.harga, .about{
+    margin-top: 30px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.harga .container .wrap {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.harga .wrap .dolar, .total{
+    border-right: 2px solid rgba(0,0,0,0.1);
+    padding-right: 30px;
+}
+.harga .wrap p {
+    color: rgba(0,0,0,0.5);
+    margin-top: 5px;
+}
+.harga .bars{
+    height: 10px;
+    width: 100%;
+    background-color: silver;
+    margin-top: 30px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+
+.harga .bars::before{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 60%;
+    top: 0;
+    left: 0;
+    background: darkcyan;
+    color: darkcyan;
+    z-index: 99999;
+    border-radius: 10px;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: gerak .5s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes gerak {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.harga .container, .about .container{
+    padding: 50px;
+}
+
+.about .container{
+    background-color: #fff;
+}
+.about .container .about-project p{
+    margin-top: 20px;
+    color: rgba(0,0,0,0.5);
+}
+.about .container .box-card{
+    margin-top: 30px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+.about .container .box-card .top, .button{
+    display: flex;
+    justify-content: space-between;
+}
+.about .container .box-card .top p{
+    color: darkcyan;
+    font-weight: 700;
+}
+.about .container .box-card .content-card{
+    margin: 20px 0;
+    color: rgba(0,0,0,0.5);
+}
+.about .container .box-card .button span{
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-right: 5px;
+    color: #000;
+}
+.about .container .box-card .button .jumlah{
+    display: flex;
+    align-items: center;
+    color: rgba(0,0,0,0.5);
+}
+.about .container .box-card .button .btn-card{
+    border: none;
+    padding: 15px 40px;
+    background-color: darkcyan;
+    border-radius: 32px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+.about .container .box-card .button .sold{
+    background-color: silver;
+    cursor: default;
+}
+.about .container .box-card .soldout{
+    opacity: 0.5;
+}
+
+.alert{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999999999;
+    display: none;
+    transition: all 1s ease;
+}
+.alert .container{
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 100px rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.alert .container .card .box-card.active{
+    border: 2px solid darkcyan;
+}
+.alert .container #close{
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.alert .container .text{
+    margin: 20px 0;
+    color: rgba(0,0,0,0.5);
+}
+.alert .container .card .box-card .top h4{
+    flex: 1;
+}
+.alert .container .card .box-card .top{
+    position: relative;
+}
+.alert .container .card .box-card .circle{
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: darkcyan;
+    display: inline-block;
+}
+.alert .container .card .box-card .circle-bold{
+    position: absolute;
+    color: darkcyan;
+    font-size: .5rem;
+    left: 4px;
+    bottom: 0;
+    top: 5px;
+    display: none;
+    cursor: pointer;
+}
+.alert .container .card .box-card .circle-bold.active{
+    display: inline-block;
+}
+.alert .container .card .box-card .button{
+    display: none;
+    border-top: 1px solid rgba(0,0,0,.1);
+    margin-top: 20px;
+    padding: 20px 0 20px 0;
+}
+.alert .container .card .box-card .content-card{
+    margin-bottom: 0;
+}
+.alert .container .card .box-card .button.active{
+    display: flex;
+}
+.alert .container .card .box-card .button .btn-usd, .btn-continue{
+    padding: 10px 20px;
+    border-radius: 32px;
+    border: 1px solid darkcyan;
+    display: flex;
+    align-items: center;
+}
+.alert .container .card .box-card .button .jumlah{
+    flex: 2;
+}
+.alert .container .card .box-card .button .btn-continue{
+    background-color: darkcyan;
+    color: #fff;
+    margin-left: 10px;
+}
+.alert .container .card .box-card .button .btn-usd .jumlah-usd{
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 510px){
+    .hero-container .menu ul{
+        display: none;
+    }
+}
+@media screen and (max-width: 375px){
+    .pembungkus{
+        margin: 0 50px;
+        height: 100%;
+    }
+    .harga .container .wrap{
+        flex-direction: column;
+    }
+}
