@@ -1,0 +1,109 @@
+/* tablet */
+@media screen and (max-width: 920px){
+    .pembungkus{
+        width: 100%;
+    }
+    .navbar-menu{
+        justify-content: inherit;
+        padding: 20px 30px;
+    }
+    .hero-container .menu ul{
+        display: block;
+        position: absolute;
+        top: -1000px;
+        font-size: 1.5rem;
+        background-color: #fff;
+        padding: 20px 0;
+        right: 0;
+        left: 0;
+        margin: 0 30px;
+        transition: all 1s ease;
+        border-radius: 10px;
+    }
+    .hero-container .menu ul.active{
+        top: 100px;
+    }
+    .hero-container .navbar-menu .icon-humberger{
+        position: absolute;
+        right: 30px;
+        display: block;
+    }
+    .hero-container .menu ul li a{
+        color: #000;
+        font-weight: 700;
+    }
+    .body-wrap{
+        margin: -80px 50px;
+    }
+    .harga .container .wrap{
+        flex-direction: column;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 610px){
+    .body-wrap{
+        margin: -80px 20px;
+    }
+    .body-wrap .content .btn .bookmark h3{
+        display: none;
+    }
+    .about .container .box-card .top, .button{
+        display: inline-block;
+    }
+    .about .container .box-card .top p{
+        margin-top: 5px;
+    }
+    .about .container .box-card .button .btn-card{
+        padding: 15px 30px;
+        margin-top: 20px;
+    }
+    .alert .container .card .box-card .top{
+        display: grid;
+        grid-template-areas: 
+        'icon judul judul judul judul judul judul judul judul judul judul judul judul judul judul'
+        'icon paraf paraf paraf paraf paraf paraf paraf paraf paraf paraf paraf paraf paraf paraf'
+        ;
+    }
+    .alert .container .card .box-card .top .circle{
+        grid-area: icon;
+    }
+    .alert .container .card .box-card .top h4{
+        grid-area: judul;
+    }
+    .alert .container .card .box-card .top p{
+        grid-area: paraf;
+    }
+    .alert .container .card .box-card .button{
+        display: none;
+        flex-direction: column;
+    }
+    .alert .container .card .box-card .button .jumlah{
+        flex: 0;
+        justify-content: center;
+    }
+    .alert .container .card .box-card .button .input-usd{
+        padding: 7px 10px;
+    }
+    .alert .container .card .box-card .button .icon-usd i{
+        top: 32px;
+        left: 35px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .body-wrap .content .btn{
+        padding: 20px;
+    }
+    .body-wrap .content .btn button{
+        padding: 10px 60px;
+    }
+    .harga .wrap .dolar, .total{
+        border: none;
+        padding: 0;
+    }
+    .harga .container, .about .container{
+        padding: 20px;
+    }
+    
+}

@@ -12,9 +12,7 @@ body{
     background-color: #F9F9F9;
 }
 .hero-container{
-    background: url('images/image-hero-desktop.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: url('images/image-hero-desktop.jpg');
     height: 375px;
     width: 100%;
 }
@@ -37,6 +35,9 @@ body{
     list-style: none;
     
 }
+.hero-container .navbar-menu .icon-humberger{
+    display: none;
+}
 .hero-container .menu ul li a{
     list-style: none;
     color: #E6E6E6;
@@ -44,9 +45,9 @@ body{
     font-size: 13px;
 }
 .body-wrap{
-    margin: -80px auto;
+    margin: -80px 200px;
     /* background-color: red; */
-    width: 700px;
+    /* width: 700px; */
     height: 500px;
     position: relative;
     
@@ -190,7 +191,7 @@ body{
     align-items: center;
     color: rgba(0,0,0,0.5);
 }
-.about .container .box-card .button .btn-card{
+.about .container .box-card .button .btn-card, .alert .container .card .box-card .button .btn-continue{
     border: none;
     padding: 15px 40px;
     background-color: darkcyan;
@@ -237,8 +238,18 @@ body{
     margin: 20px 0;
     color: rgba(0,0,0,0.5);
 }
+.alert .container .card .box-card{
+    position: relative;
+}
+.alert .container .card .box-card .top{
+    display: flex;
+    flex-wrap: wrap;
+}
 .alert .container .card .box-card .top h4{
     flex: 1;
+}
+.alert .container .card .box-card .top p{
+    margin: 0;
 }
 .alert .container .card .box-card .top{
     position: relative;
@@ -275,44 +286,67 @@ body{
 .alert .container .card .box-card .button.active{
     display: flex;
 }
-.alert .container .card .box-card .button .btn-usd, .btn-continue{
-    padding: 10px 20px;
+.alert .container .card .box-card .button .btn-continue, .second-alert .container #btn-done button{
+    border: none;
+    padding: 15px 40px;
+    background-color: darkcyan;
     border-radius: 32px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+.alert .container .card .box-card .button .input-usd{
+    padding: 0 20px 0 30px;
+    margin-right: 10px;
+    border-radius: 32px;
+    outline: none;
+    width: 100px;
     border: 1px solid darkcyan;
-    display: flex;
-    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+.alert .container .card .box-card .button {
+    position: relative;
 }
 .alert .container .card .box-card .button .jumlah{
-    flex: 2;
+    flex: 1;
 }
-.alert .container .card .box-card .button .btn-continue{
+/* .alert .container .card .box-card .button .btn-continue{
     background-color: darkcyan;
     color: #fff;
+    padding: 5px 40px;
     margin-left: 10px;
+} */
+.alert .container .card .box-card .button .icon-usd i{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 30px;
+    top: 25px;
 }
-.alert .container .card .box-card .button .btn-usd .jumlah-usd{
-    margin-left: 5px;
+/* .alert .container .card .box-card .button .icon-usd .input-usd{
+    padding: 10px;
+} */
+.alert .container .card .box-card .button .icon-usd{
+    position: relative;
 }
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 510px){
-    .hero-container .menu ul{
-        display: none;
-    }
+.second-alert{
+    border: 1px solid rgba(0,0,0,0.1);
+    position: absolute;
+    margin: 0 80px;
+    border-radius: 10px;
+    top: 100px;
+    z-index: 9999999999;
+    display: none;
+    box-shadow: 20px 20px 10000px rgba(0,0,0,0.5);
 }
-@media screen and (max-width: 375px){
-    .pembungkus{
-        margin: 0 50px;
-        height: 100%;
-    }
-    .harga .container .wrap{
-        flex-direction: column;
-    }
+.second-alert .container{
+    padding: 100px;
+    text-align: center;
+}
+.second-alert .container h3, p{
+    margin: 20px 0;
 }
