@@ -28,9 +28,13 @@
         right: 30px;
         display: block;
     }
+    .hero-container .navbar-menu .icon-humberger::before{
+        content: "\f00d";
+    }
     .hero-container .menu ul li a{
-        color: #000;
+        color: rgba(0,0,0,.5);
         font-weight: 700;
+        font-size: 1.3rem;
     }
     .body-wrap{
         margin: -80px 50px;
@@ -88,6 +92,12 @@
     .alert .container .card .box-card .button .icon-usd i{
         top: 32px;
         left: 35px;
+    }
+    .second-alert{
+        margin: 0 10px;
+    }
+    .second-alert .container{
+        padding: 50px;
     }
 }
 

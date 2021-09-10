@@ -244,6 +244,7 @@ body{
 .alert .container .card .box-card .top{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 .alert .container .card .box-card .top h4{
     flex: 1;
@@ -254,22 +255,23 @@ body{
 .alert .container .card .box-card .top{
     position: relative;
 }
+.alert .container .card .box-card .wrap-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 20px;
+}
 .alert .container .card .box-card .circle{
-    margin-right: 10px;
     cursor: pointer;
-    font-size: 1rem;
-    color: darkcyan;
-    display: inline-block;
+    font-size: 1.5rem;
 }
 .alert .container .card .box-card .circle-bold{
     position: absolute;
     color: darkcyan;
-    font-size: .5rem;
-    left: 4px;
-    bottom: 0;
-    top: 5px;
     display: none;
     cursor: pointer;
+    text-align: center;
 }
 .alert .container .card .box-card .circle-bold.active{
     display: inline-block;
@@ -314,12 +316,6 @@ body{
 .alert .container .card .box-card .button .jumlah{
     flex: 1;
 }
-/* .alert .container .card .box-card .button .btn-continue{
-    background-color: darkcyan;
-    color: #fff;
-    padding: 5px 40px;
-    margin-left: 10px;
-} */
 .alert .container .card .box-card .button .icon-usd i{
     position: absolute;
     right: 0;
@@ -327,9 +323,6 @@ body{
     left: 30px;
     top: 25px;
 }
-/* .alert .container .card .box-card .button .icon-usd .input-usd{
-    padding: 10px;
-} */
 .alert .container .card .box-card .button .icon-usd{
     position: relative;
 }
